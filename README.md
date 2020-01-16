@@ -70,32 +70,34 @@ Here are a below steps to get a human readable html report.
 
 ### Solution include
 
-* Logging -> On console screen and under /report/executionLogs/Logs.log directory.
-</br></br>
-* Taking screenshot on failed tests -> Please find the screen shots of failed test cases here "/report/screenShots". </br>
-  Please note that, the screenshot will also be attached to the human report format.
-</br></br>
-* Generation human readable report -> Extent Test Report is being generated covering the detailed steps, results and time line.
+* Logging -> On console screen and under "/report/executionLogs/Logs.log" directory.
 </br></br>
 
-* Generating random values for insignificant test data, for example, for new user.
+* Taking screenshot on failed tests -> Please find the screen shots of failed test cases here "/report/screenShots".
+  Please note that, the screenshot will also be attached to the html report.
 </br></br>
 
-* WebDriver factory - Implemented to initiate the driver from the available pool and close respectively. 
+* Generation human readable report -> Extent TestReport is being generated covering the detailed steps, results and time line. It is easy to understand and to analyze.
+</br></br>
+
+* WebDriver factory -> Implemented to initiate the driver from the available pool and close respectively. 
 </br></br>
 
 * Encapsulation layers like test data, logic of tests, actions on web pages and so on using page object pattern, data driven framework.
 </br></br>
 
-* Run tests in parallel mode - yes from test suite xml file, am passing "parallel="methods" which will do this. However I have kept the thread count to 1 by default.
-It can be easily changed.
+* Run tests in parallel mode -> Yes from "WebTest_TestSuite" file, am passing "parallel="methods" which will do this. 
+However I have kept the thread count to 1 by default. It can be easily changed through the xml file..
 </br></br>
 
-* Ability to run tests for different browsers/OS by configuring - Have done that, though right now I have covered just windows and mac OS and Chrome/Firefox browser respectively.
+* Generating random values for insignificant test data, for example for new user.
+</br></br>
+
+* Ability to run tests for different browsers/OS by configuring -> Have done that, though right now I have covered just Windows/Mac OS and Chrome/Firefox browser respectively.
 </br></br>
 
 * ability to run tests for different environments(urls) by configuring/by command-line.
 </br></br>
 
-* reading test data from file - Fully dynamically test cases designed. 
+* reading test data from spreadsheet file - Fully dynamically test cases designed. 
 We can updated each and every test data. Along with verification point for respective test cases as well.
