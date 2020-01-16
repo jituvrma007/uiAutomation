@@ -2,8 +2,10 @@ package com.ui.testware.helpers.pageObjects;
 
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -12,9 +14,7 @@ import com.aventstack.extentreports.Status;
 import com.ui.testware.base.UiBaseSetup;
 
 public class DashBoardPage extends UiBaseSetup {
-	//WebDriver driver;
 	WebElement element;
-	//WebDriverWait wait;
 
 	public DashBoardPage(WebDriver driver, WebDriverWait wait, ExtentTest testSteps, Logger log) {
 		this.driver = driver;
@@ -91,17 +91,20 @@ public class DashBoardPage extends UiBaseSetup {
 	public void addToCartAndCheckoutProduct(String linkOnMenu, String productDetails, String productSize,
 			String productColour) {
 		click(linkOnMenu(linkOnMenu));
-		testSteps.log(Status.PASS, "Clicked 'Women' button in the menu header");
-		log.info("Clicked 'Women' button in the menu header");
-		stopTheScript(2);
+		testSteps.log(Status.PASS, "Clicked " + linkOnMenu + " button in the menu header");
+		log.info("Clicked " + linkOnMenu + " button in the menu header");
+		stopTheScript(3);
 
 		click(productName(productDetails));
 		testSteps.log(Status.PASS, "Click the product with name - " + productDetails);
 		log.info("Click the product with name - " + productDetails);
 
-		click(productName(productDetails));
-		testSteps.log(Status.PASS, "Click the product with name - " + productDetails);
-		log.info("seocnd Click the product with name - " + productDetails);
+		Capabilities cap = ((RemoteWebDriver) driver).getCapabilities();
+		if (cap.getBrowserName().toLowerCase().contains("chrome")) {
+			click(productName(productDetails));
+			testSteps.log(Status.PASS, "Click the product with name - " + productDetails);
+			log.info("seocnd Click the product with name - " + productDetails);
+		}
 
 		selectValueFromDropDownByVisibleText(productSize(), productSize);
 		testSteps.log(Status.PASS, "Changing the size of the product to " + productSize);

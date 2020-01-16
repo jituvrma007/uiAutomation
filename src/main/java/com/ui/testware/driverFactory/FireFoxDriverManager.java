@@ -15,7 +15,9 @@ public class FireFoxDriverManager extends DriverManager {
 		if (null == firfoxDriverService) {
 			try {
 				firfoxDriverService = new GeckoDriverService.Builder()
-						.usingDriverExecutable(new File(CommonHelperMethods.getBrowserTpeDependingOnOS(DriverType.FIREFOX))).usingAnyFreePort().build();
+						.usingDriverExecutable(
+								new File(CommonHelperMethods.getBrowserTpeDependingOnOS(DriverType.FIREFOX)))
+						.usingAnyFreePort().build();
 				firfoxDriverService.start();
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -31,9 +33,10 @@ public class FireFoxDriverManager extends DriverManager {
 
 	@Override
 	public void createDriver() {
-		System.setProperty("webdriver.gecko.driver", CommonHelperMethods.getBrowserTpeDependingOnOS(DriverType.FIREFOX));
-		System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
-		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
+		System.setProperty("webdriver.gecko.driver",
+				CommonHelperMethods.getBrowserTpeDependingOnOS(DriverType.FIREFOX));
+//		System.setProperty(FirefoxDriver.SystemProperty.DRIVER_USE_MARIONETTE, "true");
+//		System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "/dev/null");
 		driver = new FirefoxDriver(firfoxDriverService);
 		driver.manage().window().fullscreen();
 	}

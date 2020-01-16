@@ -9,10 +9,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.ui.testware.base.UiBaseSetup;
 
 public class HomePage extends UiBaseSetup {
-	//WebDriver driver;
 	WebElement element;
-	//WebDriverWait wait;
-
+	
 	public HomePage(WebDriver driver, WebDriverWait wait) {
 		this.driver = driver;
 		this.wait = wait;

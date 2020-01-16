@@ -13,7 +13,7 @@ Here are the dependencies used in the project for development & testing perspect
 * [TestNG](https://testng.org/doc/) - Unit Testing framework for Java 
 * [ExtentReports](http://extentreports.com/) - Reporting framework for our tests
 * [Log4j](https://logging.apache.org/log4j/2.x/) - Logging framework for our tests
-* [Apache POI](https://poi.apache.org/) - Parse the test data .xlsx files,
+* [Apache POI](https://poi.apache.org/) - Parse the test data .xlsx files.
 
 
 ## Getting Started
@@ -58,8 +58,17 @@ The below steps will get you a copy of the project up and running, on your local
 4) If the values are not specified as command line argument then it will pick up the default "homepage" url and Chrome browser for execution.
 ```
 
+## A Gentle Note
+Sometimes, it happens that the same tests are working in one browser, however not is different browser.
+Moreover, in some cases the behavior is sometime it is running fine, but sometime it is getting failed.
+
+Ideally, the developed script is tested well on mac machine Chrome/Firefox browser.  
+So, in case it does not works well then request you to first update your local installed browsers and then try to run the script.
+Still issues are coming, Please write back to me : jituvrma007@gmail.com
+
 ### Test Reports
 Here are a below steps to get a human readable html report.
+
 
 ```
 1) Navigate to respective directory where the project is stored locally.
@@ -74,20 +83,20 @@ Here are a below steps to get a human readable html report.
 </br></br>
 
 * Taking screenshot on failed tests -> Please find the screen shots of failed test cases here "/report/screenShots".
-  Please note that, the screenshot will also be attached to the html report.
+  Please note that, the screenshot will also be attached to the .html report.
 </br></br>
 
-* Generation human readable report -> Extent TestReport is being generated covering the detailed steps, results and time line. It is easy to understand and to analyze.
+* Generation html human readable report -> Yes, html reports are being generated with using utility ExtentReports. It is covering the detailed steps, pass/fail/skipped results and with the respective time line. It is easy to understand and to analyze supports detailed charts as well.
 </br></br>
 
 * WebDriver factory -> Implemented to initiate the driver from the available pool and close respectively. 
 </br></br>
 
-* Encapsulation layers like test data, logic of tests, actions on web pages and so on using page object pattern, data driven framework.
+* Layers like, PageObjects, Test Layer, setup and infra layers are done. Using page object pattern, data driven framework, Factory pattern to initalize the driver. After all it is just a sample project, we can design and extend this framework to scale our smoke/sanity/regression based tests.
 </br></br>
 
 * Run tests in parallel mode -> Yes from "WebTest_TestSuite" file, am passing "parallel="methods" which will do this. 
-However I have kept the thread count to 1 by default. It can be easily changed through the xml file..
+However I have kept the thread count to 1 by default. It can be easily changed inside the .xml file..
 </br></br>
 
 * Generating random values for insignificant test data, for example for new user.
@@ -96,8 +105,7 @@ However I have kept the thread count to 1 by default. It can be easily changed t
 * Ability to run tests for different browsers/OS by configuring -> Have done that, though right now I have covered just Windows/Mac OS and Chrome/Firefox browser respectively.
 </br></br>
 
-* ability to run tests for different environments(urls) by configuring/by command-line.
+* Ability to run tests for different environments(urls) by configuring/by command-line. Yes, please cross check the build running mechanism.
 </br></br>
 
-* reading test data from spreadsheet file - Fully dynamically test cases designed. 
-We can updated each and every test data. Along with verification point for respective test cases as well.
+* reading test data from spreadsheet file - Fully dynamically test cases designed. We can update each and every test data. Along with verification point for respective test cases as well.

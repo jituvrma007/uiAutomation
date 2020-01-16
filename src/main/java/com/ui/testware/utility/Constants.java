@@ -9,7 +9,8 @@ public class Constants {
 	public static String MAC_CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/mac/chromedriver";
 	public static String MAC_GEKO_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/mac/geckodriver";
 
-	public static String WINDOWS_CHROME_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/windows/chromedriver.exe";
+	public static String WINDOWS_CHROME_DRIVER_PATH = System.getProperty("user.dir")
+			+ "/drivers/windows/chromedriver.exe";
 	public static String WINDOWS_GEKO_DRIVER_PATH = System.getProperty("user.dir") + "/drivers/windows/geckodriver.exe";
 
 	public static int IMPLICIT_WAIT = 40;
