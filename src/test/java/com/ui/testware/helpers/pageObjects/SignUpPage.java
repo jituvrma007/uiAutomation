@@ -10,9 +10,7 @@ import com.ui.testware.base.UiBaseSetup;
 
 public class SignUpPage extends UiBaseSetup {
 
-	WebDriver driver;
 	WebElement element;
-	WebDriverWait wait;
 
 	public SignUpPage(WebDriver driver, WebDriverWait wait) {
 

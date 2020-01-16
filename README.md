@@ -42,6 +42,22 @@ The below steps will get you a copy of the project up and running, on your local
 [INFO] ------------------------------------------------------------------------
 ````
 
+
+## Parameterize Run 
+ 
+
+```
+1) Open your terminal and Navigate to the respective directory where project is cloned and run below command.
+   mvn clean install -Dbrowser="FIREFOX" -Durl="http://automationpractice.com/index.php";
+   
+2) Above command will build the project based on Firefox browser with the default url.
+
+3) For Chrome, the same request will be  -
+   mvn clean install -Dbrowser="CHROME" -Durl="http://automationpractice.com/index.php";
+
+4) If the values are not specified as command line argument then it will pick up the default "homepage" url and Chrome browser for execution.
+```
+
 ### Test Reports
 Here are a below steps to get a human readable html report.
 
@@ -68,7 +84,7 @@ Here are a below steps to get a human readable html report.
 * WebDriver factory - Implemented to initiate the driver from the available pool and close respectively. 
 </br></br>
 
-* Encapsulation layers like test data, logic of tests, actions on web pages and so on using page object pattern, driven by test data.
+* Encapsulation layers like test data, logic of tests, actions on web pages and so on using page object pattern, data driven framework.
 </br></br>
 
 * Run tests in parallel mode - yes from test suite xml file, am passing "parallel="methods" which will do this. However I have kept the thread count to 1 by default.
@@ -81,4 +97,5 @@ It can be easily changed.
 * ability to run tests for different environments(urls) by configuring/by command-line.
 </br></br>
 
-* reading test data from file - Fully dynamically test cases designed. Every test data we can update and change. Along with verification point as well.
+* reading test data from file - Fully dynamically test cases designed. 
+We can updated each and every test data. Along with verification point for respective test cases as well.

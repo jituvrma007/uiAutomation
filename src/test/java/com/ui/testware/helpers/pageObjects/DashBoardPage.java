@@ -12,9 +12,9 @@ import com.aventstack.extentreports.Status;
 import com.ui.testware.base.UiBaseSetup;
 
 public class DashBoardPage extends UiBaseSetup {
-	WebDriver driver;
+	//WebDriver driver;
 	WebElement element;
-	WebDriverWait wait;
+	//WebDriverWait wait;
 
 	public DashBoardPage(WebDriver driver, WebDriverWait wait, ExtentTest testSteps, Logger log) {
 		this.driver = driver;
@@ -99,9 +99,9 @@ public class DashBoardPage extends UiBaseSetup {
 		testSteps.log(Status.PASS, "Click the product with name - " + productDetails);
 		log.info("Click the product with name - " + productDetails);
 
-		click(productName(productDetails));
-		testSteps.log(Status.PASS, "Click the product with name - " + productDetails);
-		log.info("seocnd Click the product with name - " + productDetails);
+//		click(productName(productDetails));
+//		testSteps.log(Status.PASS, "Click the product with name - " + productDetails);
+//		log.info("seocnd Click the product with name - " + productDetails);
 
 		selectValueFromDropDownByVisibleText(productSize(), productSize);
 		testSteps.log(Status.PASS, "Changing the size of the product to " + productSize);

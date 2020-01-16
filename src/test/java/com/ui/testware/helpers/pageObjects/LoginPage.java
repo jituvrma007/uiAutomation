@@ -11,11 +11,8 @@ import com.aventstack.extentreports.Status;
 import com.ui.testware.base.UiBaseSetup;
 
 public class LoginPage extends UiBaseSetup {
-	WebDriver driver;
 	WebElement element;
-	WebDriverWait wait;
-	ExtentTest testSteps;
-
+	
 	public LoginPage(WebDriver driver, WebDriverWait wait, ExtentTest testSteps, Logger log) {
 		this.driver = driver;
 		this.wait = wait;

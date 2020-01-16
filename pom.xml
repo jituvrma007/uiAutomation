@@ -18,7 +18,7 @@
 					<version>2.22.2</version>
 					<configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>src/test/resources/com/UiAutomation/SanityTestSuites/WebTest_UISanityTestSuite.xml</suiteXmlFile>
+                        <suiteXmlFile>src/test/resources/com/UiAutomation/TestSuites/WebTest_TestSuite.xml</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
 				</plugin>

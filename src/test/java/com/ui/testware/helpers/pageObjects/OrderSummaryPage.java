@@ -12,9 +12,7 @@ import com.aventstack.extentreports.Status;
 import com.ui.testware.base.UiBaseSetup;
 
 public class OrderSummaryPage extends UiBaseSetup {
-	WebDriver driver;
 	WebElement element;
-	WebDriverWait wait;
 
 	public OrderSummaryPage(WebDriver driver, WebDriverWait wait, ExtentTest testSteps, Logger log) {
 		this.driver = driver;
